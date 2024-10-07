@@ -64,6 +64,51 @@ const App = () => {
       <main className="main">
         <div className="box">
           <button className="btn-toggle">+</button>
+          <ul className="list">
+            {tempMovieData.map((movie) => (
+              <li key={movie.imdbID}>
+                <img src={movie.Poster} alt="poster" />
+                <h3>{movie.Title}</h3>
+                <div>
+                  <p>
+                    <span>📝</span>
+                    <span>{movie.Year}</span>
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="box">
+          <button className="btn-toggle">-</button>
+          <div className="summary">
+            <h2>Movies you watched</h2>
+            <div>
+              <p>
+                <span>#️⃣</span>
+                <span>{12} movies</span>
+              </p>
+              <p>
+                <span>⭐️</span>
+                <span>{5}</span>
+              </p>
+              <p>
+                <span>🌟</span>
+                <span>{4}</span>
+              </p>
+              <p>
+                <span>⌛️</span>
+                <span>{120} min</span>
+              </p>
+            </div>
+          </div>
+
+          <ul className="list">
+            {tempWatchedData.map((movies) => (
+              <li key={movies.imdbID}></li>
+            ))}
+          </ul>
         </div>
       </main>
     </div>
