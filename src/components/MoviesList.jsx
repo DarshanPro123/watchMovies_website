@@ -5,13 +5,11 @@ const MoviesList = ({ tempMovieData }) => {
   return (
     <>
       <div className="box">
-        <h2>Movies:</h2>
+        <h2>Movies</h2>
         <button className="btn-toggle">+</button>
         <ul className="list">
           {tempMovieData.map((movie) => (
             <>
-              <ListCard movie={movie} />
-              <ListCard movie={movie} />
               <ListCard movie={movie} />
             </>
           ))}

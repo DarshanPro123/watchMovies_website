@@ -1,5 +1,6 @@
 import React from "react";
 import MoviesList from "./MoviesList.jsx";
+import SiderBar from "./SiderBar.jsx";
 
 const MainBox = () => {
   const tempMovieData = [
@@ -8,14 +9,28 @@ const MainBox = () => {
       Title: "Inception",
       Year: "2010",
       Poster:
-        "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+        "https://image.tmdb.org/t/p/original/gQ0Emh2LT047Fip2HWye3NkrkQB.jpg",
     },
     {
       imdbID: "tt0133093",
+      Title: "The Crow",
+      Year: "2024",
+      Poster:
+        "https://image.tmdb.org/t/p/original/58QT4cPJ2u2TqWZkterDq9q4yxQ.jpg",
+    },
+    {
+      imdbID: "tt01243093",
       Title: "The Matrix",
       Year: "1999",
       Poster:
         "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    },
+    {
+      imdbID: "tt01330999",
+      Title: "DeadPool",
+      Year: "2024",
+      Poster:
+        "https://image.tmdb.org/t/p/original/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
     },
     {
       imdbID: "tt6751668",
@@ -23,6 +38,27 @@ const MainBox = () => {
       Year: "2019",
       Poster:
         "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg",
+    },
+    {
+      imdbID: "tt01243083",
+      Title: "The Matrix",
+      Year: "1999",
+      Poster:
+        "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    },
+    {
+      imdbID: "tt01242983",
+      Title: "The Matrix",
+      Year: "1999",
+      Poster:
+        "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    },
+    {
+      imdbID: "tt01242083",
+      Title: "Flow",
+      Year: "2024",
+      Poster:
+        "https://image.tmdb.org/t/p/original/dzDMewC0Hwv01SROiWgKOi4iOc1.jpg",
     },
   ];
 
@@ -52,6 +88,7 @@ const MainBox = () => {
   return (
     <>
       <main className="main">
+        <SiderBar />
         <MoviesList tempMovieData={tempMovieData} />
       </main>
     </>
