@@ -3,19 +3,30 @@ import { MdLocalMovies } from "react-icons/md";
 import { FaTv } from "react-icons/fa";
 import { MdHome } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import { IoReorderThree } from "react-icons/io5";
 
 const SiderBar = () => {
+  const [toggle, setToggle] = React.useState(true);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
   return (
     <>
       {" "}
-      <div className="side-bar">
+      <div className={`side-bar ${!toggle ? "small" : ""}`}>
         <ul>
+          <span onClick={handleToggle} style={{ cursor: "pointer" }}>
+            {" "}
+            <IoReorderThree />
+          </span>
+
           <li>
             <NavLink activeClassname="active" to={"/"}>
               <span>
                 <MdHome />
               </span>
-              Home
+              {toggle && "Home"}
             </NavLink>
           </li>
           <li>
@@ -23,7 +34,7 @@ const SiderBar = () => {
               <span>
                 <MdLocalMovies />
               </span>
-              Movies
+              {toggle && "Movies"}
             </NavLink>
           </li>
           <li>
@@ -31,7 +42,7 @@ const SiderBar = () => {
               <span>
                 <FaTv />
               </span>
-              Shows
+              {toggle && "Shows"}
             </NavLink>
           </li>
         </ul>
