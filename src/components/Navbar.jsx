@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -6,7 +7,9 @@ const Navbar = () => {
       <nav className="nav-bar">
         <div className="logo">
           <span role="img">🦹🏻‍♂️</span>
-          <h1>watchMovies</h1>
+          <h1>
+            <Link to={"/"}>watchMovies</Link>
+          </h1>
         </div>
         <input type="search" className="search" placeholder="Search movies.." />
       </nav>
