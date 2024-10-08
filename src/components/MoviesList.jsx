@@ -34,7 +34,9 @@ const MoviesList = ({ searchValue }) => {
 
   return (
     <div className="box">
-      <h2>Movies</h2>
+      <h2>
+        Movies <span>{moviesData.length} results</span>
+      </h2>
       <button className="btn-toggle">+</button>
       {loading ? (
         <p>Loading...</p>

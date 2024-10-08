@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { MdLocalMovies } from "react-icons/md";
 import { FaTv } from "react-icons/fa";
 import { MdHome } from "react-icons/md";
@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import { IoReorderThree } from "react-icons/io5";
 
 const SiderBar = () => {
-  const [toggle, setToggle] = React.useState(true);
+  const [toggle, setToggle] = useState(true);
 
   const handleToggle = () => {
     setToggle(!toggle);

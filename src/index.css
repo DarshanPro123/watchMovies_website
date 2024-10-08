@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 :root {
   --color-primary: #0d1018;
   --color-primary-light: #505970;
@@ -93,7 +94,9 @@ strong {
 .logo h1 {
   font-size: 2.4rem;
   cursor: pointer;
+  letter-spacing: 10px;
   text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
 }
 
 .logo h1 a {
@@ -230,6 +233,10 @@ strong {
   height: 0.2rem;
   background-color: var(--color-main);
   margin-top: 1.6rem;
+}
+
+.box h2 span {
+  color: var(--color-red);
 }
 
 .box h2:hover::after {
