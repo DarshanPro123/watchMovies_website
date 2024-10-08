@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar.jsx";
 import MainBox from "./components/MainBox.jsx";
 
 const App = () => {
-  const [searchValue, setSearchValue] = React.useState("game");
+  const [searchValue, setSearchValue] = React.useState("famous");
   return (
     <div>
       <Router>

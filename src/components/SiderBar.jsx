@@ -14,13 +14,15 @@ const SiderBar = () => {
   return (
     <>
       {" "}
-      <div className={`side-bar ${!toggle ? "small" : ""}`}>
+      <span
+        onClick={handleToggle}
+        style={{ cursor: "pointer", fontSize: "2.8rem" }}
+      >
+        {" "}
+        <IoReorderThree />
+      </span>
+      <div className={`side-bar ${!toggle ? "small nav-close" : ""}`}>
         <ul>
-          <span onClick={handleToggle} style={{ cursor: "pointer" }}>
-            {" "}
-            <IoReorderThree />
-          </span>
-
           <li>
             <NavLink activeClassname="active" to={"/"}>
               <span>
