@@ -1,116 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import MainBox from "./components/MainBox.jsx";
 
 const App = () => {
-  const tempMovieData = [
-    {
-      imdbID: "tt1375666",
-      Title: "Inception",
-      Year: "2010",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
-    },
-    {
-      imdbID: "tt0133093",
-      Title: "The Matrix",
-      Year: "1999",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
-    },
-    {
-      imdbID: "tt6751668",
-      Title: "Parasite",
-      Year: "2019",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg",
-    },
-  ];
-
-  const tempWatchedData = [
-    {
-      imdbID: "tt1375666",
-      Title: "Inception",
-      Year: "2010",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
-      runtime: 148,
-      imdbRating: 8.8,
-      userRating: 10,
-    },
-    {
-      imdbID: "tt0088763",
-      Title: "Back to the Future",
-      Year: "1985",
-      Poster:
-        "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-      runtime: 116,
-      imdbRating: 8.5,
-      userRating: 9,
-    },
-  ];
-
   return (
     <div>
-      <nav className="nav-bar">
-        <div className="logo">
-          <span role="img">🍿</span>
-          <h1>watchMovies</h1>
-        </div>
-        <input type="search" className="search" placeholder="Search movies.." />
-        <p className="num-results">
-          Found <strong>12</strong> results
-        </p>
-      </nav>
-
-      <main className="main">
-        <div className="box">
-          <button className="btn-toggle">+</button>
-          <ul className="list">
-            {tempMovieData.map((movie) => (
-              <li key={movie.imdbID}>
-                <img src={movie.Poster} alt="poster" />
-                <h3>{movie.Title}</h3>
-                <div>
-                  <p>
-                    <span>📝</span>
-                    <span>{movie.Year}</span>
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="box">
-          <button className="btn-toggle">-</button>
-          <div className="summary">
-            <h2>Movies you watched</h2>
-            <div>
-              <p>
-                <span>#️⃣</span>
-                <span>{12} movies</span>
-              </p>
-              <p>
-                <span>⭐️</span>
-                <span>{5}</span>
-              </p>
-              <p>
-                <span>🌟</span>
-                <span>{4}</span>
-              </p>
-              <p>
-                <span>⌛️</span>
-                <span>{120} min</span>
-              </p>
-            </div>
-          </div>
-
-          <ul className="list">
-            {tempWatchedData.map((movies) => (
-              <li key={movies.imdbID}></li>
-            ))}
-          </ul>
-        </div>
-      </main>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<MainBox />} />
+        </Routes>
+      </Router>
     </div>
   );
 };
