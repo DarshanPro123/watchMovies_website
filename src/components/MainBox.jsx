@@ -2,7 +2,7 @@ import React from "react";
 import MoviesList from "./MoviesList.jsx";
 import SiderBar from "./SiderBar.jsx";
 
-const MainBox = () => {
+const MainBox = ({ searchValue }) => {
   const tempMovieData = [
     {
       imdbID: "tt1375666",
@@ -89,7 +89,7 @@ const MainBox = () => {
     <>
       <main className="main">
         <SiderBar />
-        <MoviesList tempMovieData={tempMovieData} />
+        <MoviesList searchValue={searchValue} tempMovieData={tempMovieData} />
       </main>
     </>
   );

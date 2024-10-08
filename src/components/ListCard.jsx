@@ -3,11 +3,11 @@ import React from "react";
 const ListCard = ({ movie }) => {
   return (
     <>
-      <li key={movie.imdbID}>
-        <img src={movie.Poster} alt="poster" />
+      <li key={movie.id}>
+        <img src={movie.i?.imageUrl || "default-image.jpg"} alt="poster" />
         <div>
-          <h3>{movie.Title}</h3>
-          <p>{movie.Year}</p>
+          <h3>{movie.l}</h3>
+          <p>Actors: {movie.s}</p>
         </div>
       </li>
     </>

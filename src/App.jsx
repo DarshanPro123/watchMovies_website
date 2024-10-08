@@ -4,12 +4,13 @@ import Navbar from "./components/Navbar.jsx";
 import MainBox from "./components/MainBox.jsx";
 
 const App = () => {
+  const [searchValue, setSearchValue] = React.useState("game");
   return (
     <div>
       <Router>
-        <Navbar />
+        <Navbar searchValue={searchValue} setSearchValue={setSearchValue} />
         <Routes>
-          <Route path="/" element={<MainBox />} />
+          <Route path="/" element={<MainBox searchValue={searchValue} />} />
           <Route path="/movies" element={<MainBox />} />
           <Route path="/shows" element={<MainBox />} />
         </Routes>
