@@ -39,7 +39,7 @@ const MoviesList = ({ searchValue }) => {
       </h2>
       <button className="btn-toggle">+</button>
       {loading ? (
-        <p>Loading...</p>
+        <p className="loading">Loading...</p>
       ) : (
         <ul className="list">
           {moviesData.map((movie) => (

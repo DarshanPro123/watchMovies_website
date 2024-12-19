@@ -54,6 +54,15 @@ body {
   justify-content: center;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  color: var(--color-main);
+  font-size: 4rem;
+}
+
 .box {
   width: 100%;
   /* max-width: ; */
